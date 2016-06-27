@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RestaurantManagerAM"
+  Version="11.1.1.56.60"
+  ClearCacheOnRollback="true">
+  <DesignTime>
+    <Attr Name="_deployType" Value="0"/>
+  </DesignTime>
+  <ViewUsage
+    Name="Menu1"
+    ViewObjectName="restaurantmanager.view.MenuVO"/>
+  <ViewUsage
+    Name="OrderDesc1"
+    ViewObjectName="restaurantmanager.view.OrderDescVO"/>
+  <ViewUsage
+    Name="OrderDetail1"
+    ViewObjectName="restaurantmanager.view.OrderDetailVO"/>
+  <ViewUsage
+    Name="SubMenu1"
+    ViewObjectName="restaurantmanager.view.SubMenuVO"/>
+  <ViewUsage
+    Name="SubMenu2"
+    ViewObjectName="restaurantmanager.view.SubMenuVO"/>
+  <ViewLinkUsage
+    Name="MenuVOtoSubMenuVOVL1"
+    Version="11.1.1.56.60"
+    ViewLinkObjectName="restaurantmanager.viewLink.MenuVOtoSubMenuVOVL"
+    SrcViewUsageName="restaurantmanager.applicationModule.RestaurantManagerAM.Menu1"
+    DstViewUsageName="restaurantmanager.applicationModule.RestaurantManagerAM.SubMenu2"
+    Reversed="false"/>
+</AppModule>

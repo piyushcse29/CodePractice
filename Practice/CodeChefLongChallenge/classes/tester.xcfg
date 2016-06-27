@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="decemberlongchallenge.module.AppModuleAM">
+      <AppModuleConfig name="15281DC522E" DBconnection="java:comp/env/jdbc/TejaDS" ApplicationName="decemberlongchallenge.module.AppModuleAM" DeployPlatform="LOCAL" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" JDBCName="Teja" BC4JConfigName="AppModuleAMLocal" jbo.project="decemberlongchallenge.DecemberLongChallenge">
+         <Database jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="decemberlongchallenge.module.AppModuleAM"/>
+         <Tester FullProxyInterfaceName="decemberlongchallenge.module.common.AppModuleAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:_testers_credentials_needed="false" ns0:JDBCDataSource="java:comp/env/jdbc/TejaDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

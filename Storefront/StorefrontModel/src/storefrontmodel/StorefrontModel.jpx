@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="StorefrontModel"
+  Version="11.1.1.56.60"
+  SeparateXMLFiles="true"
+  PackageName="storefrontmodel">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../StorefrontModel.jpr"/>
+    <Attr Name="_NamedConnection" Value="FOD"/>
+  </DesignTime>
+</JboProject>

@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="decemberlongchallenge.module.AppModuleAM">
+      <AppModuleConfig name="AppModuleAMLocal" jbo.project="decemberlongchallenge.DecemberLongChallenge" ApplicationName="decemberlongchallenge.module.AppModuleAM" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="decemberlongchallenge.module.AppModuleAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/TejaDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="AppModuleAMShared" jbo.project="decemberlongchallenge.DecemberLongChallenge" ApplicationName="decemberlongchallenge.module.AppModuleAM" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="decemberlongchallenge.module.AppModuleAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/TejaDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="AppModuleService" jbo.project="decemberlongchallenge.DecemberLongChallenge" ApplicationName="decemberlongchallenge.module.AppModuleAM" DeployPlatform="SI">
+         <AM-Pooling jbo.ampool.resetnontransactionalstate="true"/>
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="decemberlongchallenge.module.AppModuleAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/TejaDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

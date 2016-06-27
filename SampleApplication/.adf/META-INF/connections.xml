@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="TomcatServer" className="oracle.rc.asadapter.connection.AppServerProvider" xmlns="">
+      <Factory className="oracle.rc.asadapter.connection.AppServerProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="JMX_CONNECTOR_PORT">
+            <Contents>7001</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>weblogic</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnectionType">
+            <Contents>Tomcat_6.x_Local</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="JMX_CONNECTOR_HOST">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="JMX_CONNECTOR_SSL_PORT">
+            <Contents>7002</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="weblogic.domain">
+            <Contents>wl_server</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="Tomcat_webapps_dir">
+            <Contents>C:\Users\piymitta\Desktop\Temp\AjinkyaP\apache-tomcat-7.0.65-windows-x64\apache-tomcat-7.0.65\webapps</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="Oracle-db" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="Oracle-db" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="sid">
+            <Contents>in124120</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1522</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>indl124120.in.oracle.com</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>fusion</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="mysql-conn" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="mysql-conn" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="subtype">
+            <Contents>MYSQL</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>root</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>3306</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>com.mysql.jdbc.Driver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="dataSourceName">
+            <Contents>fusiondb</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+</References>

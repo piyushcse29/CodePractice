@@ -1,0 +1,25 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="/decemberlongchallenge/uiview/common/"
+     xmlns="/decemberlongchallenge/uiview/common/" elementFormDefault="qualified" sdoJava:package="decemberlongchallenge.uiview.common">
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="SqlinjectionSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>Personid</attribute>
+                    <attribute>Lastname</attribute>
+                    <attribute>Firstname</attribute>
+                    <attribute>Address</attribute>
+                    <attribute>City</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Personid" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="Lastname" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Firstname" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Address" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="City" type="xsd:string" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="sqlinjectionSDO" type="SqlinjectionSDO"/>
+</xsd:schema>

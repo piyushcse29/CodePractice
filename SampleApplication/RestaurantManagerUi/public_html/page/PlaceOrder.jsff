@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelSplitter orientation="vertical" splitterPosition="50" id="ps1">
+    <f:facet name="first"/>
+    <f:facet name="second">
+      <!-- id="af_twocol_right_full_header_TwosplitsandStretched"   -->
+      <af:panelSplitter orientation="horizontal" splitterPosition="100"
+                        positionedFromEnd="true" id="ps2">
+        <f:facet name="first">
+          <af:table value="#{bindings.Menu1.collectionModel}" var="row"
+                    rows="#{bindings.Menu1.rangeSize}"
+                    emptyText="#{bindings.Menu1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                    fetchSize="#{bindings.Menu1.rangeSize}"
+                    rowBandingInterval="0"
+                    filterModel="#{bindings.Menu1Query.queryDescriptor}"
+                    queryListener="#{bindings.Menu1Query.processQuery}"
+                    filterVisible="true" varStatus="vs"
+                    selectedRowKeys="#{bindings.Menu1.collectionModel.selectedRow}"
+                    selectionListener="#{bindings.Menu1.collectionModel.makeCurrent}"
+                    rowSelection="single" id="t1">
+            <af:column sortProperty="MenuName" filterable="true" sortable="true"
+                       headerText="#{bindings.Menu1.hints.MenuName.label}"
+                       id="c1">
+              <af:inputText value="#{row.bindings.MenuName.inputValue}"
+                            label="#{bindings.Menu1.hints.MenuName.label}"
+                            required="#{bindings.Menu1.hints.MenuName.mandatory}"
+                            columns="#{bindings.Menu1.hints.MenuName.displayWidth}"
+                            maximumLength="#{bindings.Menu1.hints.MenuName.precision}"
+                            shortDesc="#{bindings.Menu1.hints.MenuName.tooltip}"
+                            id="it2">
+                <f:validator binding="#{row.bindings.MenuName.validator}"/>
+              </af:inputText>
+            </af:column>
+            <af:column sortProperty="MenuId" filterable="true" sortable="true"
+                       headerText="#{bindings.Menu1.hints.MenuId.label}"
+                       id="c2">
+              <af:inputText value="#{row.bindings.MenuId.inputValue}"
+                            label="#{bindings.Menu1.hints.MenuId.label}"
+                            required="#{bindings.Menu1.hints.MenuId.mandatory}"
+                            columns="#{bindings.Menu1.hints.MenuId.displayWidth}"
+                            maximumLength="#{bindings.Menu1.hints.MenuId.precision}"
+                            shortDesc="#{bindings.Menu1.hints.MenuId.tooltip}"
+                            id="it1">
+                <f:validator binding="#{row.bindings.MenuId.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.Menu1.hints.MenuId.format}"/>
+              </af:inputText>
+            </af:column>
+          </af:table>
+        </f:facet>
+        <f:facet name="second"/>
+      </af:panelSplitter>
+    </f:facet>
+  </af:panelSplitter>
+</jsp:root>

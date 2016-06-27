@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="restaurantmanager.applicationModule.RestaurantManagerAM">
+      <AppModuleConfig name="RestaurantManagerAMLocal" ApplicationName="restaurantmanager.applicationModule.RestaurantManagerAM" DeployPlatform="LOCAL" JDBCName="mysql-conn" jbo.project="restaurantmanager.RestaurantManager">
+         <Database jbo.sql92.JdbcDriverClass="com.mysql.jdbc.Driver" jbo.TypeMapEntries="Java" jbo.SQLBuilder="SQL92"/>
+         <Security AppModuleJndiName="restaurantmanager.applicationModule.RestaurantManagerAM"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="RestaurantManagerAMShared" ApplicationName="restaurantmanager.applicationModule.RestaurantManagerAM" DeployPlatform="LOCAL" JDBCName="mysql-conn" jbo.project="restaurantmanager.RestaurantManager">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.sql92.JdbcDriverClass="com.mysql.jdbc.Driver" jbo.TypeMapEntries="Java" jbo.SQLBuilder="SQL92"/>
+         <Security AppModuleJndiName="restaurantmanager.applicationModule.RestaurantManagerAM"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

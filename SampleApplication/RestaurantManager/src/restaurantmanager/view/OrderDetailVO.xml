@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="OrderDetailVO"
+  Version="11.1.1.56.60"
+  SelectList="OrderDetailEO.order_id, 
+       OrderDetailEO.tableno"
+  FromList="ORDERDETAIL OrderDetailEO"
+  BindingStyle="JDBC"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="OrderDetailEO"
+    Entity="restaurantmanager.entity.OrderDetailEO"/>
+  <ViewAttribute
+    Name="OrderId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="OrderId"
+    EntityUsage="OrderDetailEO"
+    AliasName="order_id"/>
+  <ViewAttribute
+    Name="Tableno"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Tableno"
+    EntityUsage="OrderDetailEO"
+    AliasName="tableno"/>
+</ViewObject>

@@ -1,0 +1,85 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="/model/module/common/types/"
+     xmlns:tns="/model/module/common/types/" xmlns:ns0="/model/uiview/common/" xmlns:ns1="http://xmlns.oracle.com/adf/svc/errors/">
+    <import namespace="http://xmlns.oracle.com/adf/svc/errors/" schemaLocation="classpath:/META-INF/wsdl/ServiceException.xsd"/>
+    <import namespace="/model/uiview/common/" schemaLocation="../../../uiview/common/SqlinjectionSDO.xsd"/>
+    <element name="createSqlinjection1">
+        <complexType>
+            <sequence>
+                <element name="sqlinjection1" type="ns0:SqlinjectionSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSqlinjection1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SqlinjectionSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSqlinjection1">
+        <complexType>
+            <sequence>
+                <element name="sqlinjection1" type="ns0:SqlinjectionSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSqlinjection1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SqlinjectionSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSqlinjection1">
+        <complexType>
+            <sequence>
+                <element name="sqlinjection1" type="ns0:SqlinjectionSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSqlinjection1Response">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="createSqlinjection1Async">
+        <complexType>
+            <sequence>
+                <element name="sqlinjection1" type="ns0:SqlinjectionSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSqlinjection1AsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SqlinjectionSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSqlinjection1Async">
+        <complexType>
+            <sequence>
+                <element name="sqlinjection1" type="ns0:SqlinjectionSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSqlinjection1AsyncResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="updateSqlinjection1Async">
+        <complexType>
+            <sequence>
+                <element name="sqlinjection1" type="ns0:SqlinjectionSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSqlinjection1AsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SqlinjectionSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

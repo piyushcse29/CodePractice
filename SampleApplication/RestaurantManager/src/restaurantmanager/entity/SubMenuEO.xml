@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SubMenuEO"
+  Version="11.1.1.56.60"
+  DBObjectType="table"
+  DBObjectName="SUBMENU"
+  AliasName="SubMenuEO"
+  BindingStyle="JDBC"
+  UseGlueCode="false">
+  <DesignTime>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="SubmenuId"
+    IsNotNull="true"
+    Precision="11"
+    Scale="0"
+    ColumnName="submenu_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="SUBMENU"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="11"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SubmenuName"
+    IsNotNull="true"
+    Precision="100"
+    ColumnName="submenu_name"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SUBMENU">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MenuId"
+    Precision="11"
+    Scale="0"
+    ColumnName="menu_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="SUBMENU">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="11"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Menu"
+    Association="restaurantmanager.associations.MenuEOtoSubMenuEOAS"
+    AssociationEnd="restaurantmanager.associations.MenuEOtoSubMenuEOAS.Menu"
+    AssociationOtherEnd="restaurantmanager.associations.MenuEOtoSubMenuEOAS.SubMenu"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="Primary1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRIMARY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="restaurantmanager.entity.SubMenuEO.SubmenuId"/>
+    </AttrArray>
+  </Key>
+</Entity>

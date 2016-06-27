@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SubMenuVO"
+  Version="11.1.1.56.60"
+  SelectList="SubMenuEO.menu_id, 
+       SubMenuEO.submenu_id, 
+       SubMenuEO.submenu_name"
+  FromList="SUBMENU SubMenuEO"
+  BindingStyle="JDBC"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="SubMenuEO"
+    Entity="restaurantmanager.entity.SubMenuEO"/>
+  <ViewAttribute
+    Name="MenuId"
+    PrecisionRule="true"
+    EntityAttrName="MenuId"
+    EntityUsage="SubMenuEO"
+    AliasName="menu_id"/>
+  <ViewAttribute
+    Name="SubmenuId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="SubmenuId"
+    EntityUsage="SubMenuEO"
+    AliasName="submenu_id"/>
+  <ViewAttribute
+    Name="SubmenuName"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="SubmenuName"
+    EntityUsage="SubMenuEO"
+    AliasName="submenu_name"/>
+  <ViewLinkAccessor
+    Name="Menu"
+    ViewLink="restaurantmanager.viewLink.MenuVOtoSubMenuVOVL"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
+</ViewObject>

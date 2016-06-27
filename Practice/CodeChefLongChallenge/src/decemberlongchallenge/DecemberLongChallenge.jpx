@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DecemberLongChallenge"
+  Version="12.1.3.10.8"
+  SeparateXMLFiles="true"
+  PackageName="decemberlongchallenge">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../DecemberLongChallenge.jpr"/>
+    <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
+    <Attr Name="_NamedConnection" Value="Teja"/>
+    <Attr Name="_appModuleNames0" Value="decemberlongchallenge.module.AppModuleAM"/>
+  </DesignTime>
+  <Containee
+    Name="entity"
+    PackageName="decemberlongchallenge.entity"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="module"
+    PackageName="decemberlongchallenge.module"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="uiview"
+    PackageName="decemberlongchallenge.uiview"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+</JboProject>

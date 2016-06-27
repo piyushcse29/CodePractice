@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.56.60" id="DataBindings" SeparateXMLFiles="false"
+             Package="restaurantmanagerui" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/page/PlaceOrder.jsff"
+          usageId="restaurantmanagerui_PlaceOrderPageDef"/>
+    <page path="/page/PlaceOrder.jspx"
+          usageId="restaurantmanagerui_PlaceOrderPageDef1"/>
+    <page path="/page/test.jsp" usageId="restaurantmanagerui_testPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="restaurantmanagerui_PlaceOrderPageDef"
+          path="page.PlaceOrderPageDef"/>
+    <page id="restaurantmanagerui_PlaceOrderPageDef1"
+          path="page.PlaceOrderPageDef1"/>
+    <page id="restaurantmanagerui_testPageDef" path="page.testPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="RestaurantManagerAMDataControl"
+                     Package="restaurantmanager.applicationModule"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="RestaurantManagerAMLocal"
+                     syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

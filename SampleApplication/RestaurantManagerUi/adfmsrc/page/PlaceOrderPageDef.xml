@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="PlaceOrderPageDef" Package="page">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Menu1" RangeSize="25"
+              DataControl="RestaurantManagerAMDataControl" id="Menu1Iterator"
+              ChangeEventPolicy="ppr"/>
+    <iterator Binds="SubMenu2" RangeSize="25"
+              DataControl="RestaurantManagerAMDataControl" id="SubMenu2Iterator"
+              ChangeEventPolicy="ppr"/>
+    <searchRegion Binds="Menu1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="Menu1Query"/>
+  </executables>
+  <bindings>
+    <action IterBinding="Menu1Iterator" id="First" RequiresUpdateModel="true"
+            Action="first"/>
+    <action IterBinding="Menu1Iterator" id="Previous" RequiresUpdateModel="true"
+            Action="previous"/>
+    <action IterBinding="Menu1Iterator" id="Next" RequiresUpdateModel="true"
+            Action="next"/>
+    <action IterBinding="Menu1Iterator" id="Last" RequiresUpdateModel="true"
+            Action="last"/>
+    <attributeValues IterBinding="Menu1Iterator" id="MenuName">
+      <AttrNames>
+        <Item Value="MenuName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Menu1Iterator" id="MenuId">
+      <AttrNames>
+        <Item Value="MenuId"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="SubMenu2Iterator" id="First1"
+            RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="SubMenu2Iterator" id="Previous1"
+            RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="SubMenu2Iterator" id="Next1" RequiresUpdateModel="true"
+            Action="next"/>
+    <action IterBinding="SubMenu2Iterator" id="Last1" RequiresUpdateModel="true"
+            Action="last"/>
+    <attributeValues IterBinding="SubMenu2Iterator" id="MenuId1">
+      <AttrNames>
+        <Item Value="MenuId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SubMenu2Iterator" id="SubmenuId">
+      <AttrNames>
+        <Item Value="SubmenuId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SubMenu2Iterator" id="SubmenuName">
+      <AttrNames>
+        <Item Value="SubmenuName"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="Menu1Iterator" id="Menu1">
+      <nodeDefinition DefName="restaurantmanager.view.MenuVO">
+        <AttrNames>
+          <Item Value="MenuName"/>
+          <Item Value="MenuId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

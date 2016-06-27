@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModuleAM"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <DesignTime>
+    <Attr Name="_deployType" Value="4096"/>
+  </DesignTime>
+  <ViewUsage
+    Name="Sqlinjection1"
+    ViewObjectName="model.uiview.SqlinjectionVO"/>
+  <Remote
+    Name="ServiceInterface"
+    ServerClassName="model.module.server.serviceinterface.AppModuleServiceImpl"
+    ServerInterfaceName="model.module.common.serviceinterface.AppModuleService">
+    <DesignTime>
+      <Attr Name="_webServiceName" Value="AppModuleService"/>
+      <Attr Name="_targetNameSpace" Value="/model/module/common/"/>
+      <Attr Name="_genAsyncMethods" Value="true"/>
+    </DesignTime>
+  </Remote>
+  <ServiceViewUsage
+    ViewUsageName="Sqlinjection1"
+    CanCreate="true"
+    CanUpdate="true"
+    CanDelete="true">
+    <DesignTime>
+      <Attr Name="_DeleteOpName" Value="deleteSqlinjection1"/>
+      <Attr Name="_UpdateOpName" Value="updateSqlinjection1"/>
+      <Attr Name="_CreateOpName" Value="createSqlinjection1"/>
+    </DesignTime>
+  </ServiceViewUsage>
+</AppModule>

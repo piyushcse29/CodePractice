@@ -1,0 +1,207 @@
+<wsdl:definitions
+     name="AppModuleService"
+     targetNamespace="/model/module/common/"
+     xmlns:tns="/model/module/common/"
+     xmlns:types="/model/module/common/types/"
+     xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/"
+     xmlns:orafault="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <plnk:partnerLinkType name="AppModuleService">
+        <plnk:role name="AppModuleServiceProvider">
+            <plnk:portType name="tns:AppModuleService"/>
+        </plnk:role>
+        <plnk:role name="AppModuleServiceRequestor">
+            <plnk:portType name="tns:AppModuleServiceResponse"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="classpath:/META-INF/wsdl/ServiceException.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0" schemaLocation="classpath:/META-INF/oracle-webservices-async-fault-11_0.xsd"/>
+            <import namespace="/model/module/common/types/" schemaLocation="AppModuleService.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="AppModuleService_createSqlinjection1">
+        <wsdl:part name="parameters" element="types:createSqlinjection1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_createSqlinjection1Response">
+        <wsdl:part name="parameters" element="types:createSqlinjection1Response"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_updateSqlinjection1">
+        <wsdl:part name="parameters" element="types:updateSqlinjection1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_updateSqlinjection1Response">
+        <wsdl:part name="parameters" element="types:updateSqlinjection1Response"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_deleteSqlinjection1">
+        <wsdl:part name="parameters" element="types:deleteSqlinjection1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_deleteSqlinjection1Response">
+        <wsdl:part name="parameters" element="types:deleteSqlinjection1Response"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_createSqlinjection1Async">
+        <wsdl:part name="parameters" element="types:createSqlinjection1Async"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_deleteSqlinjection1Async">
+        <wsdl:part name="parameters" element="types:deleteSqlinjection1Async"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_updateSqlinjection1Async">
+        <wsdl:part name="parameters" element="types:updateSqlinjection1Async"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_onFault">
+        <wsdl:part name="parameters" element="orafault:Fault"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_createSqlinjection1AsyncResponse">
+        <wsdl:part name="parameters" element="types:createSqlinjection1AsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_deleteSqlinjection1AsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteSqlinjection1AsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_updateSqlinjection1AsyncResponse">
+        <wsdl:part name="parameters" element="types:updateSqlinjection1AsyncResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="AppModuleService">
+        <wsdl:documentation>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="Sqlinjection1" xmlns:ns0="/model/uiview/common/"
+                 SDOName="ns0:SqlinjectionSDO" CreateOpName="createSqlinjection1" UpdateOpName="updateSqlinjection1"
+                 DeleteOpName="deleteSqlinjection1"/>
+        </wsdl:documentation>
+        <wsdl:operation name="createSqlinjection1">
+            <wsdl:input message="tns:AppModuleService_createSqlinjection1"/>
+            <wsdl:output message="tns:AppModuleService_createSqlinjection1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateSqlinjection1">
+            <wsdl:input message="tns:AppModuleService_updateSqlinjection1"/>
+            <wsdl:output message="tns:AppModuleService_updateSqlinjection1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteSqlinjection1">
+            <wsdl:input message="tns:AppModuleService_deleteSqlinjection1"/>
+            <wsdl:output message="tns:AppModuleService_deleteSqlinjection1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createSqlinjection1Async">
+            <wsdl:input message="tns:AppModuleService_createSqlinjection1Async" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="/model/module/common/createSqlinjection1Async"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteSqlinjection1Async">
+            <wsdl:input message="tns:AppModuleService_deleteSqlinjection1Async" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="/model/module/common/deleteSqlinjection1Async"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateSqlinjection1Async">
+            <wsdl:input message="tns:AppModuleService_updateSqlinjection1Async" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="/model/module/common/updateSqlinjection1Async"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="AppModuleServiceResponse">
+        <wsdl:operation name="onFault">
+            <wsdl:input message="tns:AppModuleService_onFault" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0/Fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="createSqlinjection1AsyncResponse">
+            <wsdl:input message="tns:AppModuleService_createSqlinjection1AsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="/model/module/common/createSqlinjection1AsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteSqlinjection1AsyncResponse">
+            <wsdl:input message="tns:AppModuleService_deleteSqlinjection1AsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="/model/module/common/deleteSqlinjection1AsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateSqlinjection1AsyncResponse">
+            <wsdl:input message="tns:AppModuleService_updateSqlinjection1AsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="/model/module/common/updateSqlinjection1AsyncResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="AppModuleServiceSoapHttp" type="tns:AppModuleService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="createSqlinjection1">
+            <soap:operation soapAction="/model/module/common/createSqlinjection1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateSqlinjection1">
+            <soap:operation soapAction="/model/module/common/updateSqlinjection1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteSqlinjection1">
+            <soap:operation soapAction="/model/module/common/deleteSqlinjection1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createSqlinjection1Async">
+            <soap:operation soapAction="/model/module/common/createSqlinjection1Async"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteSqlinjection1Async">
+            <soap:operation soapAction="/model/module/common/deleteSqlinjection1Async"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateSqlinjection1Async">
+            <soap:operation soapAction="/model/module/common/updateSqlinjection1Async"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="AppModuleServiceResponseBinding" type="tns:AppModuleServiceResponse">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="onFault">
+            <soap:operation soapAction="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0/Fault"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createSqlinjection1AsyncResponse">
+            <soap:operation soapAction="/model/module/common/createSqlinjection1AsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteSqlinjection1AsyncResponse">
+            <soap:operation soapAction="/model/module/common/deleteSqlinjection1AsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateSqlinjection1AsyncResponse">
+            <soap:operation soapAction="/model/module/common/updateSqlinjection1AsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="AppModuleService">
+        <wsdl:port name="AppModuleServiceSoapHttpPort" binding="tns:AppModuleServiceSoapHttp">
+            <soap:address location="http://localhost:7101/Model/AppModuleService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

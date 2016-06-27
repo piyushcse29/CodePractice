@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="testPageDef" Package="page">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Menu1" RangeSize="25"
+              DataControl="RestaurantManagerAMDataControl" id="Menu1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="Menu1Iterator" id="Menu1">
+      <nodeDefinition DefName="restaurantmanager.view.MenuVO">
+        <AttrNames>
+          <Item Value="MenuName"/>
+          <Item Value="MenuId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

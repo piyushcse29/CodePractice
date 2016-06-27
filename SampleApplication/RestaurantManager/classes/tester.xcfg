@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="restaurantmanager.applicationModule.RestaurantManagerAM">
+      <AppModuleConfig name="150ADEE3BA2" DeployPlatform="LOCAL" BC4JConfigName="RestaurantManagerAMLocal" ApplicationName="restaurantmanager.applicationModule.RestaurantManagerAM" JDBCName="mysql-conn" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" jbo.project="restaurantmanager.RestaurantManager">
+         <Database jbo.sql92.JdbcDriverClass="com.mysql.jdbc.Driver" jbo.SQLBuilder="SQL92" jbo.TypeMapEntries="Java"/>
+         <Security AppModuleJndiName="restaurantmanager.applicationModule.RestaurantManagerAM"/>
+         <Tester FullProxyInterfaceName="restaurantmanager.applicationModule.common.RestaurantManagerAM"/>
+         <Custom LastUsedConfiguration="RestaurantManagerAMLocal"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

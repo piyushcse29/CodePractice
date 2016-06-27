@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:table value="#{bindings.Menu1.collectionModel}" var="row"
+                  rows="#{bindings.Menu1.rangeSize}"
+                  emptyText="#{bindings.Menu1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  fetchSize="#{bindings.Menu1.rangeSize}"
+                  rowBandingInterval="0" id="t1">
+          <af:column sortProperty="MenuName" sortable="false"
+                     headerText="#{bindings.Menu1.hints.MenuName.label}"
+                     id="c1">
+            <af:inputText value="#{row.bindings.MenuName.inputValue}"
+                          label="#{bindings.Menu1.hints.MenuName.label}"
+                          required="#{bindings.Menu1.hints.MenuName.mandatory}"
+                          columns="#{bindings.Menu1.hints.MenuName.displayWidth}"
+                          maximumLength="#{bindings.Menu1.hints.MenuName.precision}"
+                          shortDesc="#{bindings.Menu1.hints.MenuName.tooltip}"
+                          id="it2">
+              <f:validator binding="#{row.bindings.MenuName.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="MenuId" sortable="false"
+                     headerText="#{bindings.Menu1.hints.MenuId.label}" id="c2">
+            <af:inputText value="#{row.bindings.MenuId.inputValue}"
+                          label="#{bindings.Menu1.hints.MenuId.label}"
+                          required="#{bindings.Menu1.hints.MenuId.mandatory}"
+                          columns="#{bindings.Menu1.hints.MenuId.displayWidth}"
+                          maximumLength="#{bindings.Menu1.hints.MenuId.precision}"
+                          shortDesc="#{bindings.Menu1.hints.MenuId.tooltip}"
+                          id="it1">
+              <f:validator binding="#{row.bindings.MenuId.validator}"/>
+              <af:convertNumber groupingUsed="false"
+                                pattern="#{bindings.Menu1.hints.MenuId.format}"/>
+            </af:inputText>
+          </af:column>
+        </af:table>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>
